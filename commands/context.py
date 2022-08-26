@@ -4,8 +4,8 @@ from typing import Union
 
 class Flags:
 
-    def __init__(self) -> None:
-        pass
+    def __init__(self, text) -> None:
+        self.text = text
 
 class Context:
 
