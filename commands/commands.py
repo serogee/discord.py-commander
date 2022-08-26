@@ -16,7 +16,7 @@ class Command:
         if case_sensitive:
             self.regex = fr"{'|'.join([re.escape(trigger) for trigger in self.triggers])}"
         else:
-            self.regex = fr"(?i(?:{'|'.join([re.escape(trigger) for trigger in self.triggers])}))"
+            self.regex = fr"(?i:{'|'.join([re.escape(trigger) for trigger in triggers])})"
         
 
 class FlaggedCommand(Command):
