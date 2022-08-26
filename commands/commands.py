@@ -28,5 +28,5 @@ class FlaggedCommand(Command):
             _flags.append(inp)
         for flag, *_ in flags:
             _flags.append(fr"({re.escape(flag)})")
-        self.re = re.compile(fr"^[ \n]*(?P<_TRIGGER>{regex})(?P<_FLAGS>(?:[^ \t\n\u200b]*?(?:{'|'.join(_flags)}))*[^ \t\n\u200b]*)[ \t\n\u200b]*(?P<_CONTENT>.*)$", re.DOTALL)
+        self.re = re.compile(fr"^[ \n]*(?P<_TRIGGER>{regex})(?P<_FLAGS>(?i:[^ \t\n\u200b]*?(?:{'|'.join(_flags)}))*[^ \t\n\u200b]*)[ \t\n\u200b]*(?P<_CONTENT>.*)$", re.DOTALL)
         
